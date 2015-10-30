@@ -7,4 +7,5 @@ COPY ./start.sh /root/start.sh
 RUN chmod +x /root/start.sh
 RUN rm -rf /etc/nginx/sites-enabled/default
 RUN go get -v github.com/papertrail/remote_syslog2
+COPY ./ssl /etc/nginx/ssl
 ENTRYPOINT /root/start.sh
